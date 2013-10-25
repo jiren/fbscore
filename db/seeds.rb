@@ -17,11 +17,13 @@
     description: 'Games'
   }
 ].each do |business| 
-  business = FactoryGirl.create(:business, {
-      name: business[:name], 
-      description: business[:description], 
-      fb_url: business[:fb_url],
-      website: nil
+  business = Business.create({
+    name: business[:name], 
+    description: business[:description], 
+    fb_url: business[:fb_url],
+    website: nil,
+    user_name: 'jiren',
+    email: 'jiren@gmail.com'
   })
   business.update_fb_info
 end
