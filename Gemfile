@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'unicorn'
 gem 'httparty'
+gem 'whenever', :require => false
 
 group :production do
   gem 'rails_12factor'
