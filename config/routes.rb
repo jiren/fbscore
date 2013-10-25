@@ -1,3 +1,5 @@
 FbScore::Application.routes.draw do
-  root :to => "home#index"
+  resources :businesses, :only => [:index, :new, :create]
+
+  root :to => "businesses#index"
 end

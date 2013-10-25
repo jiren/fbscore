@@ -1,0 +1,11 @@
+%h3.title Add new bussiness to track. 
+= simple_form_for(@business, html: {class: 'span8'}) do |f|
+  = f.input :name, label: 'Business name'
+  = f.input :fb_url, label: 'Facebook url'
+  = f.input :description
+  = f.input :user_name, label: 'Your name'
+  = f.input :email, label: 'Your email'
+  .control-group
+    .controls
+      = f.button :submit, class: 'btn-inverse', value: 'Add'
+      = link_to 'Cancel', :back, class: 'btn'

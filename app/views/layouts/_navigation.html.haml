@@ -1,1 +1,7 @@
-= link_to "Fb Score", root_path, :class => 'brand'
+= link_to "FbScore", root_path, :class => 'brand'
+%ul.nav
+  %li{class: active?('businesses', ['new', 'create'])}
+    = link_to new_business_path do
+      %i.icon-plus
+      Business brand  
+
