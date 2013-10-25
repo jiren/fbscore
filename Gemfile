@@ -9,12 +9,14 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'haml-rails'
-gem 'mysql2'
 gem 'simple_form', '>= 3.0.0.rc'
 gem 'unicorn'
 gem 'httparty'
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
+end
 
 group :development do
   gem 'better_errors'
@@ -25,6 +27,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'mysql2'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'faker', '~> 1.1.2'
